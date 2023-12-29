@@ -1,0 +1,90 @@
+<p-toast></p-toast>
+
+
+<form [formGroup]="cupomForm">
+
+  <section
+    class="flex surface-200 w-full justify-content-center align-items-center flex-column"
+  >
+    <div class="viewList" *ngIf="cupomDetails">
+      <div class="listHeader">
+        <h4>{{cupomDetails.codigo_pedido_interno}}</h4>
+      </div>
+      <div class="listItens">
+        
+        <div
+          class="cupom-body flex flex-row w-full mt-5 mb-5 justify-content-center align-items-center"          
+        >
+        
+          <div
+            class="cupom-img flex surface-900 h-19rem justify-content-center align-items-center flex-column"
+          >
+          
+            <div *ngIf="!stream">
+              <p-button
+                icon="pi pi-camera"
+                styleClass="p-button-outlined"
+                (click)="tirarFoto()"
+              ></p-button>
+            </div>
+          </div>
+          <h5  class="cameraClickMessage">Clique para abrir a câmera!</h5>
+
+
+          <div
+            class="cupom-infos flex bg-white h-19rem p-2 flex-column align-items-center justify-content-center"
+          >
+            <div
+              class="cupom-info-digit flex flex-column w-full text-center gap-4"
+            >
+
+            <div class="cupomDropDown flex align-items-center justify-content-center flex-row w-full gap-1">
+
+              <div class="cupomDropDownInputs flex flex-column w-full">
+              <h4>Bandeira:</h4>
+              <p-dropdown
+              [options]="Bandeiras"
+              optionLabel="bandeiraCartao"
+              optionValue="bandeiraCartao"
+              placeholder="Selecione..."
+              formControlName="bandeira_do_cartao"
+              appendTo="body"
+            ></p-dropdown>
+          </div>
+
+          <div class="cupomDropDownInputs flex flex-column w-full">
+            <h4>Pagamento:</h4>
+            <p-dropdown
+            [options]="Pagamentos"
+            optionLabel="formaPagamento"
+            optionValue="formaPagamento"
+            placeholder="Selecione..."
+            formControlName="forma_de_pagamento"
+            appendTo="body"
+          >
+            ></p-dropdown
+          >
+        </div>
+
+            </div>
+
+            <div class="NSU w-full">
+                <h4>NSU:</h4>
+                <input  type="number" class="cupom-numbers" formControlName="nsu" placeholder="Digite o NSU..."/>
+              </div>
+
+              <div class="autorizacao w-full">
+                <h4>Autorização:</h4>
+                <input type="number" class="cupom-numbers" formControlName="autorizacao" placeholder="Digite a Autorização..."/>
+              </div>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
+    <div *ngIf="getFailed" class="error404 flex flex-column w-full h-full justify-content-center align-items-center text-center">
+      <img src="../../../assets/img/Oops! 404 Error with a broken robot-rafiki.svg" alt="">
+      <p>Você teve um problema ao se conectar com o Servidor, Tente Novamente...</p>
+  </div>
+  </section>
+</form>

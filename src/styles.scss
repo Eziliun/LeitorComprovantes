@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+@import "primeicons/primeicons.css";
+
+:root {
+  --green-success: #4CAF50;
+  --red-error-trans: rgba(255, 0, 0, 0.5) ;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 9999px;
+    
+  }
+  ::-webkit-scrollbar-thumb {
+    tw-border-opacity: 1;
+    background-color: rgba(78, 104, 118, 0.8);
+    border-color: rgba(255,255,255,var(--tw-border-opacity));
+    border-radius: 9999px;
+    border-width: 1px;
+  }

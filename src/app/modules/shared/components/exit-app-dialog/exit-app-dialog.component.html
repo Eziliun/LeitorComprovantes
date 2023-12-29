@@ -1,0 +1,23 @@
+<p-dialog [visible]="closeAppDialog" [closable]="false" [modal]="true" [style]="{width: '80vw'}">
+    <ng-template pTemplate="header">
+        <div class="dialogHeaderCamps flex justify-content-start align-items-center gap-2 w-full h-full">
+        <span class="text-xl font-bold">Atenção</span>
+    </div>
+</ng-template>
+
+
+    <div class="dialogBodyCamps flex align-items-center justify-content-start w-full overflow-hidden ">
+    <i class="pi pi-exclamation-triangle text-2xl mr-2 mb-2"></i>
+    <h5 class="text-lg white-space-nowrap">Tem certeza que deseja sair?</h5>
+    </div>
+
+    <ng-template pTemplate="footer">
+
+<div class="dialogFooterCamps flex align-items-end justify-content-end gap-1">
+    <p-button icon="pi pi-times" label="Não" styleClass="p-button-outlined" (onClick)="cancelarCloseAppDialog()"></p-button>
+    <p-button icon="pi pi-check" label="Sim" (onClick)="aceitarCloseAppDialog()"></p-button>
+</div>
+</ng-template>
+
+
+</p-dialog>

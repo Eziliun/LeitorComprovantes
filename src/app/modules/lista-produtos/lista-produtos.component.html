@@ -1,0 +1,37 @@
+<p-toast></p-toast>
+
+
+
+  <section
+    class="flex surface-200 w-full justify-content-center align-items-center flex-column"
+  >
+    <div class="viewList" *ngIf="cupomData">
+      <div class="listHeader">
+        <h4>Cupons Pendentes</h4>
+      </div>
+      <div class="listItens">
+        
+        <div class="cupom-body flex flex-wrap w-full gap-5 mt-5 mb-5 justify-content-center align-items-center">
+          <div
+            class="cupomCardPedido flex flex-row w-3 h-7rem justify-content-around align-items-center text-center surface-0"
+            *ngFor="let item of cupomData"
+          >
+            <p-button
+              label="Codigo: {{item.codigo_pedido_interno}}"
+              icon="pi pi-arrow-circle-right"
+              iconPos="right"
+              styleClass="p-button-outlined"
+              (onClick)="pageCupomSendImage(item.id)"
+            ></p-button>
+          </div>
+          <h3 *ngIf="!cupomData.length" class="flex text-xl text-white justify-content-center align-items-center w-10 h-5rem text-center p-2">
+            Você já enviou todos os cupons!
+          </h3>
+        </div>
+        </div>
+    </div>
+    <div *ngIf="getFailed" class="error404 flex flex-column w-full h-full justify-content-center align-items-center text-center">
+      <img src="../../../assets/Oops! 404 Error with a broken robot-rafiki.svg" alt="">
+      <p >Você teve um problema ao se conectar com o Servidor, Tente Novamente...</p>
+  </div>
+  </section>

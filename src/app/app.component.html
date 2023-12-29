@@ -1,0 +1,23 @@
+
+<app-header></app-header>
+
+<app-exit-app-dialog *ngIf = valueCloseAppDialog ></app-exit-app-dialog>
+
+<p-dialog [visible]="globalService.isLoadingBar()" [closable]="false" [modal]="true" [style]="{width: '80vw', height: '25vh'}">
+
+    <ng-template pTemplate="header">
+        <span class="text-2xl font-bold">Carregando</span>
+    </ng-template>
+
+    <div class="flex flex-column justify-content-center w-full h-full gap-3">
+    <span class="text-xl">Aguarde um Momento...</span>
+    <p-progressBar  mode="indeterminate" [style]="{ height: '6px'}" color="#000"></p-progressBar>
+
+</div>
+</p-dialog>
+
+<router-outlet></router-outlet>
+
+
+
+

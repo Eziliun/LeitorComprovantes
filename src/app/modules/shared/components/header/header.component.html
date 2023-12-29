@@ -1,0 +1,23 @@
+<div
+  class="header flex z-5 bg-white text-black-alpha-90 justify-content-around align-items-center h-5rem shadow-4"
+>
+
+<div class="Ajustador"><p>L</p></div>
+  <nav><h1>Banco de Notas</h1></nav>
+  <div class="button-overlay">
+    <p-button
+      icon="pi pi-user"
+      (click)="op.toggle($event)"
+      styleClass="p-button-outlined"
+    ></p-button>
+    <p-overlayPanel #op>
+      <ng-template pTemplate="content">
+        <p-button
+          label="Sair"
+          class="p-button-success"
+          (onClick)="logout()"
+        ></p-button>
+      </ng-template>
+    </p-overlayPanel>
+  </div>
+</div>

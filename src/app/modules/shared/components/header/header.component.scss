@@ -1,0 +1,20 @@
+.Ajustador{
+    visibility: hidden;
+}
+
+:host::ng-deep{
+    .header .p-button.p-button-outlined {
+        color: black;
+    }
+
+  }
+
+  @media (max-width: 588px) {
+    :host::ng-deep{
+        .header .p-button.p-button-outlined {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    
+      }
+  }

@@ -1,0 +1,31 @@
+<p-toast position="top-center" key="tc"></p-toast>
+<div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden fixed top-0 left-0">
+    <div class="flex flex-column align-items-center justify-content-center p-2">
+        <div style="border-radius:56px; padding:0.2rem;">
+            <div class="w-full surface-card py-8 px-5 sm:px-8" style="border-radius:53px">
+                <div class="text-center mb-5">
+                    <div class="flex align-items-center justify-content-center w-full">
+                    </div>
+                    <span class="text-600 font-medium text-4xl">Leitor de Cupons</span>
+                </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()" class="flex flex-column gap-2">
+
+                        <label for="username" class="block text-900 text-xl font-medium" >Email</label>
+
+                            <input id="username" type="text" placeholder="Digite seu Email..." pInputText class="w-full" style="padding:1rem" formControlName="username" >
+
+                                <small *ngIf="showEmailError()" id="username" class="p-error">Email não pode ser vazio.</small>
+
+                    <label for="k" class="block text-900 font-medium text-xl">Senha</label>
+
+                        <p-password id="password" placeholder="Digite sua Senha..."  [feedback]="false" [toggleMask]="true" styleClass="w-full" inputStyleClass="w-full p-3" formControlName="password"></p-password>
+
+                            <small *ngIf="showPasswordError()" id="password" class="p-error">Senha não pode ser vazia.</small>
+                    
+                                <button pButton pRipple label="Entrar" [disabled]="loginForm.invalid || loginForm.pristine" class="w-full p-2.5 text-xl p-button-rounded mt-3" type="submit"></button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

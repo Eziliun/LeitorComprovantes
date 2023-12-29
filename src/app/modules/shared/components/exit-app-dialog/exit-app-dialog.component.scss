@@ -1,0 +1,12 @@
+:host::ng-deep {
+    .p-button{
+        background: black;
+        border: black;
+    }
+
+    .p-button-outlined{
+        background: transparent;
+        border: 1px solid black;
+        color: black;
+    }
+}
