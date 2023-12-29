@@ -3,12 +3,8 @@ Template gerado com [Angular CLI](https://github.com/angular/angular-cli) versio
 
 # Infos
 
-- Padrão de estrutura de pastas
-- Pasta "Environments" adicionada
-- Modelo de arquivo de endpoints
-- Serviço compartilhado de erro de manipulação de error para o catchError()
-- Adicionadas dependências do módulo para moeda BRL como padrão.
+Aplicativo Com Leitor de Camera  e OCR implementados para ler Comprovantes.
 
-# Aviso
+JWT Implementado no Login
 
-Não há bibliotecas de terceiros neste template, então sempre antes de iniciar um projeto novo, verifique qual a versão estável atual do Angular e atualize-o ( ng update ).
+
